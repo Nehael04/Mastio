@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ body {
+    font-family: Arial, sans-serif;
+    max-width: 100vw;
+    min-width: auto;
+    background-color:  #163651;
+}
+
+.header-top {  
+    background-color: #163651;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+}
+
+.header-text {
+    margin: 0 3rem;
+    color: #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.header-space {
+    padding: 0 0.7rem;
+}
+
+.call, .email, .time {
+    height: auto;
+    max-width: 0.9rem;
+    border-radius: 0.125rem;
+    position: relative;
+    top: 0.125rem;
+}
+
+.email-inner {
+  color: #f0f0f0; 
+  text-decoration:none;
+}
+.email-inner:hover {
+  text-decoration: underline;
+  text-decoration-color: #d9dfe3;
+}
+
+.header-icons {
+    position: absolute;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.fb-icon {
+    height: auto;
+    max-width: 1.8rem;
+}
+
+.tw-icon {
+    height: auto;
+    max-width: 1.6rem;
+    background-color: #f0f0f0;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.ln-icon {
+    height: auto;
+    max-width: 1.8rem;
+}
+
+@media screen and (max-width: 900px) {
+    .header-top {
+      display: none;
+    }
+  }
+  
+
+  nav {
+    background-color: white;
+    padding:0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 10;
+  }
+
+  .logo {
+    height: auto;
+    max-width: 2.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3.4vw;
+    list-style: none;
+    padding-right: 0.5rem;
+  }
+
+  .nav-list {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .nav-list:hover {
+    color: rgb(24, 170, 170);
+    font-weight: 600;
+  }
+ 
+  .text-hover {
+    height: 0rem;
+    width: 0rem;
+    transition:0.2s ease-in-out;
+  }
+
+  .nav-list:hover .text-hover{
+    height: 0.2rem;
+    width:100%;
+    background-color: rgb(24, 170, 170);
+    
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 950px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #17384c;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+
+    #menu-toggle:checked + .hamburger + .nav-links {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .nav-list {
+        color: #f0f0f0;
+    }
+
+    .nav-list:hover {
+      color: white;
+    }
+
+    .nav-list:hover .text-hover{
+        height: 0.2rem;width:100%;
+        background-color: #d9dfe3;
+      }
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    top: 0;
+  }
+}
+
+
+.main-container {
+  height: 38rem;
+  max-height: auto;
+  min-height: auto;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative; 
+  top: 9rem;
+  z-index: 0;
+  background-color: #163651;
+}
+
+.banner-container {
+  height: 42rem;
+  max-width: 100%;
+  background-image: linear-gradient(rgba(17, 19, 22, 0.671), rgba(17, 19, 22, 0.671)), url('./assets/banner-1.jpg');
+  background-position: center 28%;
+  background-size: 110%;
+  transform: scaleX(-1);
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.banner-text {
+  color: white;
+  transform: scaleX(-1);
+  max-width: 38.5rem;
+  height: auto;
+  position: absolute;
+  top: 21%;
+  right: 3%;
+}
+
+.banner-p1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.banner-p2 {
+  font-size: 1.1rem;
+  padding: 2rem 0;
+  font-weight: lighter;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  margin-right: 6.26rem;
+}
+
+.banner-button {
+  height: 2.8rem;
+  width:9rem;
+  border-radius: 5rem;
+  border-width: 0;
+  background-color: rgb(24, 170, 170);
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.banner-button:hover {
+  background-color: #163651;
+}
+
+.form-container {
+  background-color: white;
+  height: 34.5rem;
+  width: 27rem;
+  position: absolute;
+  top: 10.8rem;
+  right:3rem;
+  z-index: 2;
+  border-radius: 1.2rem;
+  display: flex;           
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.7rem;
+}
+
+@media screen and ( max-width: 1150px) {
+  .form-container {
+    position: relative;
+    top:10rem;
+    left:5%;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-container p {
+  font-size: 1.85rem;
+  color: #163651;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+
+form label{
+  font-size: 1rem;
+  color: rgb(39, 39, 39);
+  line-height: 2rem;
+}
+
+form input {
+  height: 3rem;
+  width: 100%;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(204, 201, 201);
+  margin-bottom: 1.6rem;
+}
+
+.checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.check-label {
+  line-height: 1.5rem;
+  position: relative;
+  left: 2.5rem;
+  top: -3rem;
+  font-size: 1.1rem;
+}
+
+form button {
+  height: 2.8rem;
+  width: 7rem;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  border-width: 0;
+  background-color: #163651;
+  transition: 0.2s ease-in-out;
+  margin-top: -2rem;
+}
+
+form button span {
+  color: #163651;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+form button:hover {
+ background-color:  rgb(24, 170, 170);
+}
+
+form button:hover span {
+  color: rgb(24, 170, 170);
+}
+
+
+.table-container {
+  width: 100%;
+  background-color: #eaf4f7;
+  position: relative;
+  top: 9.05rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  z-index: 4;
+}
+
+.card-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  max-width: 30.5rem;
+  padding: 5rem 3rem;
+}
+
+
+.icon-circle {
+  height: 4.6rem;
+  width: 4.6rem;
+  background-color: rgb(24, 170, 170);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.table-img1, .table-img2, .table-img3 {
+  height: auto;
+  width: 2.2rem;
+  position: relative;
+}
+
+
+.table-img1 {
+  bottom: -0.8rem;
+  left: 1.1rem;
+}
+
+.table-img2 {
+  bottom: -1.2rem;
+  left: 1.2rem;
+}
+
+.table-img3 {
+  bottom: -1rem;
+  left: 1.2rem
+}
+
+h2 {
+  color: #163651;
+  padding-bottom: 1.5rem;
+}
+
+.table-text {
+  font-size: 1.17rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
